@@ -1,0 +1,25 @@
+name: 'Send Email with GMAIL'
+description: 'Send Email with GMAil'
+inputs:
+  username:  # id of input
+    description: 'username of Gmail account '
+    required: true
+  password:
+    description: 'username of Gmail account '
+    required: true
+  to: 
+    description: 'recipient email address'
+    required: true
+  subject:
+    decription: "Email subject"
+    default: "Email for test"
+  body:
+    description: 'Email body'
+    default: "email body" 
+     
+outputs:
+  time: # id of output
+    description: 'You email is send succefuuly'
+runs:
+  using: 'node16'
+  main: 'index.js'
