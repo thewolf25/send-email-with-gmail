@@ -11,7 +11,7 @@ try {
   // `who-to-greet` input defined in action metadata file
    email_address = core.getInput('username');
    email_password = core.getInput('password')
-   recipient_address = code.getInput('to')
+   recipient_address = core.getInput('to')
    subject = core.getInput('subject')
    body = core.getInput('body')
 
