@@ -2,14 +2,18 @@ const nodemailer = require('nodemailer');
 
 const core = require('@actions/core');
 const github = require('@actions/github');
-
+let email_address = ''
+let email_password =''
+let recipient_address =''
+let subject =''
+let body=''
 try {
   // `who-to-greet` input defined in action metadata file
-  const email_address = core.getInput('username');
-  const email_password = core.getInput('password')
-  const recipient_address = code.getInput('to')
-  const subject = core.getInput('subject')
-  const body = core.getInput('body')
+   email_address = core.getInput('username');
+   email_password = core.getInput('password')
+   recipient_address = code.getInput('to')
+   subject = core.getInput('subject')
+   body = core.getInput('body')
 
 } catch (error) {
   core.setFailed(error.message);
